@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 export default function Page({ params }: { params: { id: string } }) {
   const itemId = params.id;
-  const { getItem, itemDetailState } = useItemDetail();
+  const { getItem, itemDetailState, resetItemDetailState } = useItemDetail();
   const [itemDetail, setItemDetail] = useState<Item>();
 
   const handleBuyClick = (itemURL: string) => {
@@ -19,6 +19,9 @@ export default function Page({ params }: { params: { id: string } }) {
 
   useEffect(() => {
     if (!itemDetailState.payload) {
+      getItem(itemId);
+    } else {
+      resetItemDetailState();
       getItem(itemId);
     }
   }, []);

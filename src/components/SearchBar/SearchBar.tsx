@@ -8,10 +8,12 @@ import SearchIcon from "@/icons/search_icon.png";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 import { useItemsSearch } from "@/hooks/useItemsSearch";
+import { useItemDetail } from "@/hooks/useItemDetail";
 
 export const SearchBar = () => {
   const [searchvalue, setSearchValue] = useState("");
   const { resetItemsSearchState } = useItemsSearch();
+  const { resetItemDetailState } = useItemDetail();
   const router = useRouter();
 
   return (
@@ -23,6 +25,7 @@ export const SearchBar = () => {
         onClick={() => {
           setSearchValue("");
           resetItemsSearchState();
+          resetItemDetailState();
           router.push("/");
         }}
         style={{ cursor: "pointer" }}
@@ -38,7 +41,9 @@ export const SearchBar = () => {
         onKeyDown={(e) => {
           const target = e.target as HTMLTextAreaElement;
           if (e.key === "Enter" && target.value !== "") {
-            router.push(`items?search=${target.value}`);
+            resetItemsSearchState();
+            resetItemDetailState();
+            router.push(`/items?search=${target.value}`);
           }
         }}
       />
@@ -46,7 +51,9 @@ export const SearchBar = () => {
         className={styles.iconContainer}
         onClick={() => {
           if (searchvalue !== "") {
-            router.push(`items?search=${searchvalue}`);
+            resetItemsSearchState();
+            resetItemDetailState();
+            router.push(`/items?search=${searchvalue}`);
           }
         }}
       >

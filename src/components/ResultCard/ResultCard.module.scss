@@ -1,6 +1,7 @@
 .resultCard {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .imageContainer {
@@ -18,7 +19,7 @@
 }
 
 .infoContainer {
-  max-width: calc(90% - 132px);
+  width: calc(90% - 132px);
   max-height: 132px;
   overflow: hidden;
   margin-left: 16px;
@@ -47,7 +48,7 @@
   }
 }
 
-.description {
+.title {
   width: 70%;
   font-size: 14px;
   margin: 0;

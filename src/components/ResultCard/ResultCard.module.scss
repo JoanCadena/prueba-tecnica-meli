@@ -1,0 +1,57 @@
+.resultCard {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  height: 132px;
+  width: 132px;
+
+  @media (max-width: 676px) {
+    height: 96px;
+    width: 96px;
+  }
+}
+
+.infoContainer {
+  max-width: calc(90% - 132px);
+  max-height: 132px;
+  overflow: hidden;
+  margin-left: 16px;
+  @media (max-width: 676px) {
+    max-width: calc(90% - 96px);
+    max-height: 96px;
+  }
+}
+
+.price {
+  font-size: 22px;
+  margin: 0;
+
+  @media (max-width: 676px) {
+    font-size: 18px;
+  }
+}
+
+.author {
+  display: flex;
+  font-size: 10px;
+  margin: 0;
+  justify-content: flex-end;
+  @media (max-width: 676px) {
+    font-size: 8px;
+  }
+}
+
+.description {
+  width: 70%;
+  font-size: 14px;
+  margin: 0;
+  @media (max-width: 676px) {
+    font-size: 12px;
+  }
+}

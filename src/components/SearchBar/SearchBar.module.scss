@@ -1,0 +1,29 @@
+.barContainer {
+  display: flex;
+  padding: 18px 10%;
+  justify-content: center;
+  background-color: yellow;
+  height: 72px;
+  width: 100%;
+}
+
+.inputBar {
+  max-width: 75%;
+  height: 36px;
+  margin-left: 24px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.iconContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 36px;
+  background-color: lightgray;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}

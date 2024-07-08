@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "bootstrap/dist/css/bootstrap.min.css";
+import SearchBar from "@/components/SearchBar/SearchBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} style={{ backgroundColor: "#eeeeee" }}>
+        <SearchBar />
+        <div
+          style={{ display: "flex", justifyContent: "center", marginTop: 24, paddingBottom:48 }}
+        >
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

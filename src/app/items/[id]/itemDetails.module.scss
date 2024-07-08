@@ -1,0 +1,40 @@
+.pageContainer {
+  background-color: white;
+  width: 80%;
+  max-width: 768px;
+  height: auto;
+  padding: 24px;
+}
+
+.detailsSection {
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  @media (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.image {
+  height: 420px;
+  width: 420px;
+  @media (max-width: 676px) {
+    height: 240px;
+    width: 100%;
+  }
+}
+
+.infoContainer {
+  padding: 16px;
+}
+
+.descriptionSection {
+  margin-top: 60px;
+}

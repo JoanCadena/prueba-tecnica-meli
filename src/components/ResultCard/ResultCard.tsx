@@ -1,6 +1,5 @@
 "use client";
 
-import { Input } from "reactstrap";
 import styles from "./ResultCard.module.scss";
 import Image from "next/image";
 import { Item } from "@/interfaces/items";

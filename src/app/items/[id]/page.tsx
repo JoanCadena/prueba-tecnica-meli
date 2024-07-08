@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import styles from "./itemDetails.module.scss";
-import MeliLogo from "@/icons/meli_logo.png";
 import { Button } from "reactstrap";
 import { useItemDetail } from "@/hooks/useItemDetail";
 import { Item } from "@/interfaces/items";

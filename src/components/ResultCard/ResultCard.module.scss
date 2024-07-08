@@ -24,7 +24,7 @@
   overflow: hidden;
   margin-left: 16px;
   @media (max-width: 676px) {
-    max-width: calc(90% - 96px);
+    width: calc(90% - 96px);
     max-height: 96px;
   }
 }
@@ -32,6 +32,7 @@
 .price {
   font-size: 22px;
   margin: 0;
+  margin-right: 8px;
 
   @media (max-width: 676px) {
     font-size: 18px;

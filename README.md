@@ -18,13 +18,6 @@ Tenés que usar el siguiente stack tecnológico para construir la aplicación:
   - Node >= 6
   - Express
 
-## Para resolverlo, te pedimos que tengas en cuenta:
-
-- Usabilidad
-- SEO
-- Performance
-- Escalabilidad
-
 ## Primero, te presentamos las vistas de las pantallas que tenés que hacer:
 
 1. Caja de búsqueda

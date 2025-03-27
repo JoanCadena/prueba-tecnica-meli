@@ -39,8 +39,8 @@ export default function Page({
 
   return (
     <section className={styles.resultsSection}>
-      {resultItems.length > 0 ? (
-        resultItems.slice(0, 4).map((item) => (
+      {resultItems?.length > 0 ? (
+        resultItems?.slice(0, 4).map((item) => (
           <>
             <ResultCard
               key={item.id}
